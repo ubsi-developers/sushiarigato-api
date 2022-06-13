@@ -18,13 +18,13 @@ git clone https://github.com/UBSI-Developers/sushiarigato-api
 
 - Install composer requirement
 ```
-composer install --ignore-platform-reqs
+composer install
 composer require -w tymon/jwt-auth --ignore-platform-reqs
 ```
 
-- Run Docker image with compose
+- Make database
 ```
-docker compose up -d
+sushiarigato
 ```
 
 - Migrate all table and seed data dumy 
@@ -41,13 +41,21 @@ php artisan jwt:secret
 - Done, fork it :)
 
 ## Run services
-Linux/MacOs :
+- Linux/MacOs :
 ```
 make run
 ```
-Windows :
+- Windows :
 ```
 php -S localhost:8080 -t public
+```
+## Run as public
+1. Install ngrok
+```
+```
+2. Run http
+```
+ngrok http 8000
 ```
 
 ## Feature
@@ -66,9 +74,12 @@ Feature of collection :
 - Product
     - Product Lists
     - Product Detail
+    - Create Product
+    - Update Product
+    - Delete Product
 - Cart
     - Cart Lists
-    - Add Cart Item
+    - Create Cart Item
     - Update Cart Item
     - Delete Cart Item
 

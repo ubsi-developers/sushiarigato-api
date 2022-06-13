@@ -31,6 +31,7 @@ class ProductController extends Controller
 
         $data = [];
         foreach ($products as $product) {
+            $category =  Category::select('id', 'name')->where('id', '=', $product->category_id)->first();
             array_push(
                 $data,
                 [
@@ -39,8 +40,10 @@ class ProductController extends Controller
                     'description' => $product->description,
                     'image' => 'products/images/' . $product->id,
                     'price' => $product->price,
+                    'discount_price' => $product->price - ($product->price * $product->discount / 100),
                     'discount' => $product->discount,
-                    'category' => Category::select('id', 'name')->where('id', '=', $product->category_id)->first()
+                    'category_id' => $category->id,
+                    'category_name' => $category->name,
                 ]
             );
         }

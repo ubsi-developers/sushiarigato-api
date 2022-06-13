@@ -63,7 +63,7 @@ class Handler extends ExceptionHandler
             [
                 'status' => false,
                 'message' => $exception instanceof HttpException ? $exception->getMessage() : 'Server Error',
-                'errors' => $rendered,
+                'errors' => $exception->getMessage(),
             ],
             $rendered->getStatusCode()
         );
