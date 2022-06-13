@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "19d873df-51b2-4d14-9ec7-c4a2650f8fd3",
+		"name": "Sushi Arigato",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin1@gmail.com\",\n    \"password\":\"secret\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalDev}}/v1/login",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"admin1@gmail.com\",\n    \"password\":\"secret\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Localhost}}/api/login",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiaWF0IjoxNjUxNDI2NDMxLCJleHAiOjE2NTE0MzAwMzEsIm5iZiI6MTY1MTQyNjQzMSwianRpIjoiVXlZeHFyZ2M5cEVHbzRoSSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.tduoMm2lNKjSaILJ-19yQ5ALG3rGVFULacWMbYNizpE\",\n    \"token_type\": \"bearer\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Admin 1\",\n        \"email\": \"admin1@gmail.com\",\n        \"email_verified_at\": null,\n        \"remember_token\": null,\n        \"created_at\": \"2022-05-01T17:19:07.000000Z\",\n        \"updated_at\": \"2022-05-01T17:19:07.000000Z\"\n    },\n    \"expires_in\": 86400\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"admin2\",\n    \"email\":\"admin2@gmail.com\",\n    \"password\":\"12345678\",\n    \"address\":\"xxxx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalDev}}/v1/register",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"admin2\",\n    \"email\":\"admin2@gmail.com\",\n    \"password\":\"12345678\",\n    \"address\":\"xxxx\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LocalDev}}/v1/register",
+									"host": [
+										"{{LocalDev}}"
+									],
+									"path": [
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to register, please to login!\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNjUyNjExODkzLCJleHAiOjE2NTI2MTU0OTMsIm5iZiI6MTY1MjYxMTg5MywianRpIjoiSEF3S3BXeVR5WnVWb0IyUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.2UtFhO21qG_b62mDlxc2_v5YKquVrJgc6Smf6Y6MiJs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalDev}}/v1/logout",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profiles",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LocalDev}}/v1/users",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Category Lists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LocalDev}}/v1/categories",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LocalDev}}/v1/categories",
+									"host": [
+										"{{LocalDev}}"
+									],
+									"path": [
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"status\": 200,\r\n        \"message\": \"category lists\"\r\n    },\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"string\",\r\n\t\t\"image\": \"string\"\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product Lists",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalDev}}/v1/products",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "k",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Product List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LocalDev}}/v1/products",
+									"host": [
+										"{{LocalDev}}"
+									],
+									"path": [
+										"v1",
+										"products"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": "k",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"status\": 200,\r\n        \"message\": \"Product lists\"\r\n    },\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"string\",\r\n            \"highlight\": \"string\",\r\n\t\t\t\"image\": \"string\",\r\n            \"price\": 0,\r\n            \"discount\": 0\r\n        },        \r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"string\",\r\n            \"highlight\": \"string\",\r\n\t\t\t\"image\": \"string\",\r\n            \"price\": 0,\r\n            \"discount\": 0\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Product Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LocalDev}}/v1/products/1",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Product Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LocalDev}}/v1/products/1",
+									"host": [
+										"{{LocalDev}}"
+									],
+									"path": [
+										"v1",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"status\": 200,\r\n        \"message\": \"Product detail\"\r\n    },\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"string\",\r\n        \"highlight\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"price\": 0,\r\n        \"discount\": 0,\r\n        \"category\": {\r\n            \"id\": 1,\r\n            \"name\": \"string\"\r\n        }\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Cart List Items",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Cart List Items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Cart items\"\n    },\n    \"data\": [\n        {\n            \"id\": 0,\n            \"product_id\": \"string\",\n            \"quantity\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Cart Items",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalDev}}/v1/carts",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"carts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Cart Items",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LocalDev}}/v1/carts",
+									"host": [
+										"{{LocalDev}}"
+									],
+									"path": [
+										"v1",
+										"carts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to add cart items\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Cart Items",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalDev}}/v1/carts/1",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"carts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Cart Items",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LocalDev}}/v1/carts/1",
+									"host": [
+										"{{LocalDev}}"
+									],
+									"path": [
+										"v1",
+										"carts",
+										"1"
+									]
+								}
+							},
+							"code": 2,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to update cart items\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Cart Items",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalDev}}/v1/carts/1",
+							"host": [
+								"{{LocalDev}}"
+							],
+							"path": [
+								"v1",
+								"carts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Cart Items",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\":0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LocalDev}}/v1/carts/1",
+									"host": [
+										"{{LocalDev}}"
+									],
+									"path": [
+										"v1",
+										"carts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to delete cart items\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
