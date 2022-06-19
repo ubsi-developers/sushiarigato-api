@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "19d873df-51b2-4d14-9ec7-c4a2650f8fd3",
 		"name": "Sushi Arigato",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8197840"
 	},
 	"item": [
 		{
@@ -15,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\":\"admin1@gmail.com\",\n    \"password\":\"secret\"\n}",
+							"raw": "{\r\n    \"email\":\"users1@gmail.com\",\r\n    \"password\":\"secret\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -23,9 +24,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{LocalDev}}/v1/login",
+							"raw": "{{url}}/v1/login",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
@@ -33,40 +34,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Login",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"email\":\"admin1@gmail.com\",\n    \"password\":\"secret\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{Localhost}}/api/login",
-									"host": [
-										"{{Localhost}}"
-									],
-									"path": [
-										"api",
-										"login"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiaWF0IjoxNjUxNDI2NDMxLCJleHAiOjE2NTE0MzAwMzEsIm5iZiI6MTY1MTQyNjQzMSwianRpIjoiVXlZeHFyZ2M5cEVHbzRoSSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.tduoMm2lNKjSaILJ-19yQ5ALG3rGVFULacWMbYNizpE\",\n    \"token_type\": \"bearer\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Admin 1\",\n        \"email\": \"admin1@gmail.com\",\n        \"email_verified_at\": null,\n        \"remember_token\": null,\n        \"created_at\": \"2022-05-01T17:19:07.000000Z\",\n        \"updated_at\": \"2022-05-01T17:19:07.000000Z\"\n    },\n    \"expires_in\": 86400\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Register",
@@ -83,9 +51,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{LocalDev}}/v1/register",
+							"raw": "{{url}}/v1/register",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
@@ -93,40 +61,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Register",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"name\":\"admin2\",\n    \"email\":\"admin2@gmail.com\",\n    \"password\":\"12345678\",\n    \"address\":\"xxxx\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{LocalDev}}/v1/register",
-									"host": [
-										"{{LocalDev}}"
-									],
-									"path": [
-										"v1",
-										"register"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to register, please to login!\"\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Logout",
@@ -136,7 +71,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNjUyNjExODkzLCJleHAiOjE2NTI2MTU0OTMsIm5iZiI6MTY1MjYxMTg5MywianRpIjoiSEF3S3BXeVR5WnVWb0IyUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.2UtFhO21qG_b62mDlxc2_v5YKquVrJgc6Smf6Y6MiJs",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NTQwNzgwMTAsImV4cCI6MTY1NDA4MTYxMCwibmJmIjoxNjU0MDc4MDEwLCJqdGkiOiJkeTlNbG8xNWFEUEFWT0toIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JfALWS66XWJ_cVKZHBQ_fSn9ZrCaRp3q96byb5XUgYU",
 									"type": "string"
 								}
 							]
@@ -153,23 +88,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{LocalDev}}/v1/logout",
+							"raw": "{{url}}/v1/logout",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
 								"logout"
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Profiles",
-					"request": {
-						"method": "GET",
-						"header": []
 					},
 					"response": []
 				}
@@ -181,12 +108,22 @@
 				{
 					"name": "User Detail",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NTQ4ODI3MDQsImV4cCI6MTY1NDg4NjMwNCwibmJmIjoxNjU0ODgyNzA0LCJqdGkiOiJkY3J4dDhBNURVeHlxNk1wIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.PsBsbEA-zKl6xXfXHfUYIKGuHoXhqDnF5iAT6ytRUBE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{LocalDev}}/v1/users",
+							"raw": "{{url}}/v1/users",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
@@ -203,53 +140,6 @@
 			"item": [
 				{
 					"name": "Category Lists",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{LocalDev}}/v1/categories",
-							"host": [
-								"{{LocalDev}}"
-							],
-							"path": [
-								"v1",
-								"categories"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Category List",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{LocalDev}}/v1/categories",
-									"host": [
-										"{{LocalDev}}"
-									],
-									"path": [
-										"v1",
-										"categories"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\r\n    \"meta\": {\r\n        \"status\": 200,\r\n        \"message\": \"category lists\"\r\n    },\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"string\",\r\n\t\t\"image\": \"string\"\r\n    }\r\n}"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Product",
-			"item": [
-				{
-					"name": "Product Lists",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -266,9 +156,54 @@
 							}
 						},
 						"url": {
-							"raw": "{{LocalDev}}/v1/products",
+							"raw": "{{url}}/v1/categories",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product Lists",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NTQwNzgzMjUsImV4cCI6MTY1NDA4MTkyNSwibmJmIjoxNjU0MDc4MzI1LCJqdGkiOiJOVVBONHFWcWpvT3Zlb0IxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hqwzHUZgMl3c8kcHHq7A1CM5wEfXokPVvondsem4aAM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/products",
+							"host": [
+								"{{url}}"
 							],
 							"path": [
 								"v1",
@@ -277,73 +212,43 @@
 							"query": [
 								{
 									"key": "category",
-									"value": "1",
+									"value": "6",
 									"disabled": true
 								},
 								{
 									"key": "search",
-									"value": "k",
+									"value": "w60s5 7STW ZUHfs",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "",
 									"disabled": true
 								}
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Product List",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{LocalDev}}/v1/products",
-									"host": [
-										"{{LocalDev}}"
-									],
-									"path": [
-										"v1",
-										"products"
-									],
-									"query": [
-										{
-											"key": "category",
-											"value": "1",
-											"disabled": true
-										},
-										{
-											"key": "search",
-											"value": "k",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\r\n    \"meta\": {\r\n        \"status\": 200,\r\n        \"message\": \"Product lists\"\r\n    },\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"string\",\r\n            \"highlight\": \"string\",\r\n\t\t\t\"image\": \"string\",\r\n            \"price\": 0,\r\n            \"discount\": 0\r\n        },        \r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"string\",\r\n            \"highlight\": \"string\",\r\n\t\t\t\"image\": \"string\",\r\n            \"price\": 0,\r\n            \"discount\": 0\r\n        }\r\n    ]\r\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Product Detail",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NTQ5Njk5MzAsImV4cCI6MTY1NDk3MzUzMCwibmJmIjoxNjU0OTY5OTMwLCJqdGkiOiJING56dlhQV012cG1UM255Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lL44pOerf4dyDD6MinQOlHV_gDzcyAB0euIxo5DLD2w",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{LocalDev}}/v1/products/1",
+							"raw": "{{url}}/v1/products/1",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
@@ -352,48 +257,120 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Product Detail",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{LocalDev}}/v1/products/1",
-									"host": [
-										"{{LocalDev}}"
-									],
-									"path": [
-										"v1",
-										"products",
-										"1"
-									]
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NTU2MDkwMzAsImV4cCI6MTY1NTYxMjYzMCwibmJmIjoxNjU1NjA5MDMwLCJqdGkiOiJ5bVJiZlA0YUU5R0VtbElyIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TOUO7PmzrDtQfkzVTQ8RhJtXXIHkF-W1bHdK2RwwP5o",
+									"type": "string"
 								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\r\n    \"meta\": {\r\n        \"status\": 200,\r\n        \"message\": \"Product detail\"\r\n    },\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"string\",\r\n        \"highlight\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"price\": 0,\r\n        \"discount\": 0,\r\n        \"category\": {\r\n            \"id\": 1,\r\n            \"name\": \"string\"\r\n        }\r\n    }\r\n}"
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test\",\r\n    \"description\":\"xxxxx xxxxx xxxxx xxxxx\",\r\n    \"image\":\"https://drive.google.com/file/d/1A8k8u13surLfuEwy9ujSFPiF1bj8GQZm/view?usp=sharing\",\r\n    \"price\":100000,\r\n    \"discount\":20,\r\n    \"category_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"products"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NTU2MzY4MjYsImV4cCI6MTY1NTY0MDQyNiwibmJmIjoxNjU1NjM2ODI2LCJqdGkiOiJwQXZ1aGJuWmY3VXl4RENOIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.9GSutYmD682rEFgTRuXoIRb2GppFFrIUwDOnJSco3hs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"XXXXXXX\",\r\n    \"description\":\"xxxxx xxxxx xxxxx xxxxx\",\r\n    \"image\":\"https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/61.jpg\",\r\n    \"price\":100000,\r\n    \"discount\":20,\r\n    \"category_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/products/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NTU2NDEwMTcsImV4cCI6MTY1NTY0NDYxNywibmJmIjoxNjU1NjQxMDE3LCJqdGkiOiJUSHV1T01UVTVUWEZmNFg1Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mLxr9ZZ2phC3Lg_KwKgBswf4nxocKrIKbXoFDNqzwAo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/products/49",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"products",
+								"49"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -404,39 +381,19 @@
 					"name": "Cart List Items",
 					"request": {
 						"method": "GET",
-						"header": []
-					},
-					"response": [
-						{
-							"name": "Cart List Items",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Cart items\"\n    },\n    \"data\": [\n        {\n            \"id\": 0,\n            \"product_id\": \"string\",\n            \"quantity\": 0\n        }\n    ]\n}"
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"carts"
+							]
 						}
-					]
+					},
+					"response": []
 				},
 				{
 					"name": "Add Cart Items",
@@ -445,7 +402,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
+							"raw": "{\n  \"product_id\":3,\n  \"quantity\":2\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -453,9 +410,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{LocalDev}}/v1/carts",
+							"raw": "{{url}}/v1/carts",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
@@ -463,40 +420,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Add Cart Items",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{LocalDev}}/v1/carts",
-									"host": [
-										"{{LocalDev}}"
-									],
-									"path": [
-										"v1",
-										"carts"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to add cart items\"\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Update Cart Items",
@@ -505,7 +429,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
+							"raw": "{\n  \"product_id\":1,\n  \"quantity\":5\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -513,51 +437,18 @@
 							}
 						},
 						"url": {
-							"raw": "{{LocalDev}}/v1/carts/1",
+							"raw": "{{url}}/v1/carts/23",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
 								"carts",
-								"1"
+								"23"
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Update Cart Items",
-							"originalRequest": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"product_id\":0,\n  \"quantity\":0\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{LocalDev}}/v1/carts/1",
-									"host": [
-										"{{LocalDev}}"
-									],
-									"path": [
-										"v1",
-										"carts",
-										"1"
-									]
-								}
-							},
-							"code": 2,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to update cart items\"\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Delete Cart Items",
@@ -574,9 +465,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{LocalDev}}/v1/carts/1",
+							"raw": "{{url}}/v1/carts/1",
 							"host": [
-								"{{LocalDev}}"
+								"{{url}}"
 							],
 							"path": [
 								"v1",
@@ -585,41 +476,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Delete Cart Items",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"product_id\":0\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{LocalDev}}/v1/carts/1",
-									"host": [
-										"{{LocalDev}}"
-									],
-									"path": [
-										"v1",
-										"carts",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\n    \"meta\": {\n        \"status\": 200,\n        \"message\": \"Success to delete cart items\"\n    }\n}"
-						}
-					]
+					"response": []
 				}
 			]
 		}
