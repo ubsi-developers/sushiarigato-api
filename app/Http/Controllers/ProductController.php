@@ -38,7 +38,7 @@ class ProductController extends Controller
                     'id' => $product->id,
                     'name' => $product->name,
                     'description' => $product->description,
-                    'image' => 'products/images/' . $product->id,
+                    'image' =>  $product->image,
                     'price' => $product->price,
                     'discount_price' => $product->price - ($product->price * $product->discount / 100),
                     'discount' => $product->discount,
@@ -62,7 +62,7 @@ class ProductController extends Controller
             'id' => $product->id,
             'name' => $product->name,
             'description' => $product->description,
-            'image' => 'products/images/' . $product->id,
+            'image' =>  $product->image,
             'price' => $product->price,
             'discount' => $product->discount,
             'category' => Category::select('id', 'name')->where('id', '=', $product->category_id)->first()
@@ -74,31 +74,12 @@ class ProductController extends Controller
             'data' => $data
         ], 200);
     }
-    public function get_image($id)
-    {
-        $product = Product::where('id', '=', $id)->first();
-
-        $path = storage_path($product->image);
-        if (file_exists($path)) {
-            $file = file_get_contents($path);
-            return response($file, 200)->header('Content-Type', 'image/jpeg');
-        }
-
-        return response()->json([
-            'status' => true,
-            'message' => "Product image not found"
-        ], 200);
-    }
-
     public function insert(Request $request)
     {
-        $image = Str::random(34);
-        $request->file('image')->move(storage_path('images/products'), $image);
-
         $data = [
             'name' => $request->name,
             'description' => $request->description,
-            'image' => "images/products/" . $image,
+            'image' =>  $request->image,
             'price' => $request->price,
             'discount' => $request->discount,
             'category_id' => $request->category_id
@@ -108,18 +89,15 @@ class ProductController extends Controller
 
         return response()->json([
             'status' => true,
-            'message' => "Success to update product"
+            'message' => "Success to create product"
         ], 200);
     }
     public function update(Request $request, $id)
     {
-        $image = Str::random(34);
-        $request->file('image')->move(storage_path('image'), $image);
-
         $data = [
             'name' => $request->name,
             'description' => $request->description,
-            'image' => "image/" . $image,
+            'image' =>  $request->image,
             'price' => $request->price,
             'discount' => $request->discount,
             'category_id' => $request->category_id

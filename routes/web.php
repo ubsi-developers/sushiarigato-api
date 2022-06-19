@@ -30,10 +30,8 @@ $router->group([
         $router->post('products', 'ProductController@insert');
         $router->put('products/{id}', 'ProductController@update');
         $router->delete('products/{id}', 'ProductController@delete');
-        $router->get('products/images/{id}', 'ProductController@get_image');
 
         $router->get('categories', 'CategoryController@get');
-        $router->get('categories/images/{id}', 'CategoryController@get_image');
 
         $router->get('carts', 'CartController@get');
         $router->post('carts', 'CartController@insert');

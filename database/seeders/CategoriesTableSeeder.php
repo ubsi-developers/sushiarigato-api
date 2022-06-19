@@ -20,18 +20,16 @@ class CategoriesTableSeeder extends Seeder
     {
         $names = [
             "Appetizer",
-            "House Specialty",
             "Japanese Wagyu",
-            "Juice",
-            "Nigiri Sushi",
-            "Salad",
+            "House Specialty",
             "Sashimi",
-            "Tempura",
+            "Salad",
+            "Juice",
         ];
         foreach ($names as $i => $name) {
             DB::table('categories')->insert([
                 'name' => $name,
-                'image' => "images/categories/" . ($i + 1),
+                'image' => "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/categories/" . ($i + 1) . ".jpg",
                 'created_at' => date('Y-m-d H:i:s')
             ]);
         }

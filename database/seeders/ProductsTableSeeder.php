@@ -20,114 +20,92 @@ class ProductsTableSeeder extends Seeder
     {
         $images = [
             [
-                "takoyaki.jpg",
-                "tamagoyaki.jpg",
-                "tuna_skin.jpg"
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/11.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/12.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/13.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/14.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/15.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/16.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/17.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/18.jpg",
             ],
             [
-                "aburi.jfif",
-                "bakudan_sushi.jpg",
-                "fuzi_roll.jpg",
-                "fuzi_rolls.jpeg",
-                "salmon_kazan.jfif",
-                "salmon_wafu.jpg"
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/21.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/22.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/23.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/24.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/25.jpg",
             ],
             [
-                "wagyu_abuti.jpg",
-                "wagyu_ichimiyaki.jpg",
-                "wagyu_kata_rohsu.jpg",
-                "wagyu_misoyaki.jfif"
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/31.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/32.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/33.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/34.jpg",
             ],
             [
-                "alvocado.jpg",
-                "orange.png",
-                "strawberry.jpg"
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/41.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/42.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/43.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/44.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/45.jpg",
             ],
             [
-                "ebi.jpg",
-                "jo unagi.jpg",
-                "salmon_nigiri.jpg",
-                "tako.jpg",
-                "tamago.jpg"
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/51.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/52.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/53.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/54.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/55.jpg",
             ],
             [
-                "chef_salad.jpg",
-                "fresh_salad.webp",
-                "green_salad.jpg",
-                "sashimi_salad.jpg",
-                "sashimi_salad.webp",
-                "wakame_salad.jpg"
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/61.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/62.jpg",
+                "https://raw.githubusercontent.com/UBSI-Developers/sushiarigato-assets/main/products/63.jpg",
             ],
-            [
-                "hamachi.jpg",
-                "maguro.jpeg",
-                "namahotate.jpg",
-                "salmond.jpeg",
-                "shimaaji.jpg",
-                "shimaaji.webp",
-                "toro.jpg",
-                "uni.jpg"
-            ],
-            [
-                "prawn_tempura.jpg",
-                "shrimp.webp"
-            ]
         ];
 
         $names = [
             [
                 "Takoyaki",
                 "Tamagoyaki",
-                "Tuna Skin"
-            ],
-            [
+                "Tuna Skin",
                 "Aburi",
                 "Bakudan Sushi",
                 "Fuzi Roll",
-                "Fuzi Rolls",
                 "Salmon Kazan",
-                "Salmon Wafu"
+                "Abuti Kazan",
             ],
             [
                 "Wagyu Abuti",
                 "Wagyu Ichimiyaki",
                 "Wagyu Kata Rohsu",
-                "Wagyu Misoyaki"
+                "Wagyu Misoyaki",
+                "Wagyu Salmon",
             ],
             [
-                "Alvocado",
-                "Orange",
-                "Strawberry"
-            ],
-            [
-                "Ebi",
-                "Jo Unagi",
+                "Ebi Nigiri",
                 "Salmon Nigiri",
-                "Tako",
-                "Tamago"
+                "Tako Nigiri",
+                "Unagi Nigiri",
+            ],
+            [
+                "Shimaaji Sashimi",
+                "Toro Sashimi",
+                "Uni Sashimi",
+                "Prawn Sashimi",
+                "Fresh Sashimi"
             ],
             [
                 "Chef Salad",
                 "Fresh Salad",
                 "Green Salad",
                 "Sashimi Salad",
-                "Sashimi Salad",
                 "Wakame Salad"
             ],
             [
-                "Hamachi",
-                "Maguro",
-                "Namahotate",
-                "Salmond",
-                "Shimaaji",
-                "Shimaaji",
-                "Toro",
-                "Uni"
+                "Alvocado",
+                "Orange",
+                "Cocacola"
             ],
-            [
-                "Prawn Tempura Rolls",
-                "Shrimp"
-            ]
         ];
 
         foreach ($names as $i => $n) {
@@ -135,8 +113,13 @@ class ProductsTableSeeder extends Seeder
             foreach ($n as $j => $name) {
                 DB::table('products')->insert([
                     'name' => $name,
-                    'image' => "images/products/" . $images[$i][$j],
-                    'description' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    'image' =>  $images[$i][$j],
+                    'description' =>
+                    "Makanan Jepang yang terdiri dari nasi yang dibentuk bersama lauk (neta) berupa makanan laut, daging, sayuran mentah atau sudah dimasak.
+Nasi susyi mempunyai rasa masam yang lembut karena dibumbui campuran cuka beras, garam, dan gula.
+Asal usul kata sushi adalah kata sifat untuk rasa masam yang ditulis dengan huruf kanji sushi (酸し).
+Pada awalnya, sushi yang ditulis dengan huruf kanji 鮓 merupakan istilah untuk salah satu jenis pengawetan ikan disebut gyoshō (魚醤) yang membaluri ikan dengan garam dapur, bubuk ragi (麹 koji) atau ampas sake (糟 kasu). 
+Penulisan sushi menggunakan huruf kanji 寿司 yang dimulai pada zaman Edo periode pertengahan merupakan cara penulisan ateji (menulis dengan huruf kanji lain yang berbunyi yang sama).",
                     'price' => rand(1, 9) * 10000,
                     'discount' => rand(0, 50),
                     'category_id' => ($i + 1),

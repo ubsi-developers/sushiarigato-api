@@ -8,21 +8,10 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['login', 'refresh', 'logout']]);
     }
-    /**
-     * Get a JWT via given credentials.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
     public function login(Request $request)
     {
         $this->validate($request, [
@@ -60,12 +49,12 @@ class AuthController extends Controller
     protected function respondWithToken($token)
     {
         return response()->json([
-            'status' => false,
-            'message' => "Login Failed",
+            'status' => true,
+            'message' => "Login Success",
             'data' => [
                 'access_token' => $token,
                 'token_type' => 'bearer',
-                // 'user' => auth()->user(),
+                'user' => auth()->user(),
                 'expires_in' => auth()->factory()->getTTL() * 60 * 24
             ],
         ], 200);
