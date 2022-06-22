@@ -28,8 +28,10 @@ $router->group([
         $router->get('products', 'ProductController@get');
         $router->get('products/{id}', 'ProductController@get_by_id');
         $router->post('products', 'ProductController@insert');
-        $router->put('products/{id}', 'ProductController@update');
-        $router->delete('products/{id}', 'ProductController@delete');
+        $router->post('products/update/{id}', 'ProductController@update');
+        $router->post('products/delete/{id}', 'ProductController@delete');
+        // $router->put('products/{id}', 'ProductController@update');
+        // $router->delete('products/{id}', 'ProductController@delete');
 
         $router->get('categories', 'CategoryController@get');
 

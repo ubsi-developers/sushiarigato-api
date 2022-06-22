@@ -18,14 +18,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 20; $i++) {
-            DB::table('users')->insert([
-                'name' => "users" . ($i + 1),
-                'email' => "users" . ($i + 1) . '@gmail.com',
-                'password' => Hash::make('secret'),
-                'address' =>  Str::random(5) . " " . Str::random(4) . " " . Str::random(5),
-                'created_at' => date('Y-m-d H:i:s')
-            ]);
-        }
+        DB::table('users')->insert([
+            'name' => "Administrator",
+            'email' => "admin@gmail.com",
+            'password' => Hash::make('secret1234'),
+            'address' =>  "Jl. Sepanjang Jalan Kenangan",
+            'created_at' => date('Y-m-d H:i:s')
+        ]);
     }
 }
